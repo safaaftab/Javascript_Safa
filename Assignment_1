@@ -1,0 +1,42 @@
+If checkbox is check make the textbox readonly
+
+<script type="text/javascript">
+		
+		function EnableTextBox(checkBox)
+ {if(checkBox.checked) document.getElementById('<%= TextBox2.ClientID %>').removeAttribute('readonly');
+else document.getElementById('<%= TextBox2.ClientID %>').addAttribute('readonly');}
+</script>
+</head> <body> <form id="form1" runat="server"> <div> <asp:TextBox ID="TextBox2" runat="server">
+</asp:TextBox> <asp:CheckBox ID="CheckBox1" runat="server" onclick="EnableTextBox(this)" /> </div> </form>
+
+If the check is unchecked make the textbox editable
+
+<script type="text/javascript">
+    function EnableDisableTextBox(chkPassport) {
+        var txtPassportNumber = document.getElementById("txtPassportNumber");
+        txtPassportNumber.disabled = chkPassport.checked ? false : true;
+        if (!txtPassportNumber.disabled) {
+            txtPassportNumber.focus();
+        }
+    }
+</script>
+<label for="chkPassport">
+    <input type="checkbox" id="chkPassport" onclick="EnableDisableTextBox(this)" />
+    Do you have Passport?
+</label>
+<br />
+Passport Number:
+<input type="text" id="txtPassportNumber" disabled="disabled" />
+
+Create 2 groups of checkboxes and display all the values of the checkboxes checked by the user.
+
+<form method="post" action="/Tests/Post/">      
+    <fieldset>      
+        <legend>What is Your Favorite Pet?</legend>      
+        <input type="checkbox" name="favorite_pet" value="Cats">Cats<br>      
+        <input type="checkbox" name="favorite_pet" value="Dogs">Dogs<br>      
+        <input type="checkbox" name="favorite_pet" value="Birds">Birds<br>      
+        <br>      
+        <input type="submit" value="Submit now" />      
+    </fieldset>      
+</form>
