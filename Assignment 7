@@ -24,6 +24,9 @@ How to specify that a button should automatically get focus when the page load?
 </body>
 </html>
 
+
+
+
 How to specify one or more forms the button belongs to
 
 <!DOCTYPE html>
@@ -44,4 +47,42 @@ action="https://www.w3resource.com/html-css-exercise/basic/solution/button-form-
 </body>
 </html>
 
+
+
+
+
 How to specify that a button should be disabled?
+
+
+
+<!DOCTYPE html> 
+<html> 
+    <head> 
+        <title>
+            How to specify that a button 
+should be disabled using HTML5?
+  
+              </title> 
+    </head> 
+      
+    <body> 
+      <center>
+        <p>
+            <h2>
+                Homepage
+        </h2>
+        </p> 
+        <h2>
+            How to specify that a button 
+should be disabled using HTML5?
+        </h2>
+          
+        <!-- button tag starts from here -->
+        <button type = "button" onclick = 
+            "alert('Welcome to Homepage')" Disabled> 
+            Click Here 
+        </button> 
+        <!-- button tag ends here -->
+          
+    </body> 
+</html>  
